@@ -2,35 +2,47 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="styles/normalize.css" rel="stylesheet" type="text/css">
-    <link href="styles/navigationbar.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>homepage</title>
+    <meta name="description" content="Description" />
+
+    <!-- Title -->
+    <meta property="og:title" content="" />
+    <!-- OPTIONAL description. 2-4 sentences. -->
+    <meta property="og:description" content="" />
+    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
+    <meta property="og:url" content="" />
+    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
+    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+
+    <link rel="manifest" href="manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-    <header class=navigationBar>
-        <a class="logo" href="index.html">
-            <img class="logo__image" src="images/logo.png" alt="logo">
+    <header class=navBar>
+        <a class="navBar__logo" href="index.html">
+          <img class="navBar__logo--image" src="assets/img/logo.png" alt="logo">
         </a>
         <nav>
-            <button class="menu__button menu__button--js">
-                MENU
-            </button>
-            <ul class="nav__links nav__links--js">
-                <li><a class="indexPage" href="index.html">Strona główna</a></li>
-                <li><a href="podstrona.html">O mnie</a></li>
-                <li><a href="day1.html">Poniedziałek</a></li>
-                <li><a href="day2.html">Wtorek</a></li>
-                <li><a href="day3.html">Środa</a></li>
-                <li><a href="day4.html">Czwartek</a></li>
-                <li><a href="Contact.html">Kontakt</a></li>
-            </ul>
+          <button class="navBar__button navBar__button--menu menu__button--js">
+            MENU
+          </button>
+          <ul class="navBar__links navBar__links--js">
+            <li><a class="navBar__links--index" href="index.html">Strona główna</a></li>
+            <li><a href="podstrona.html">O mnie</a></li>
+            <li><a href="day1.html">Poniedziałek</a></li>
+            <li><a href="day2.html">Wtorek</a></li>
+            <li><a href="day3.html">Środa</a></li>
+            <li><a href="day4.html">Czwartek</a></li>
+            <li><a href="Contact.html">Kontakt</a></li>
+          </ul>
         </nav>
-        <button class="upButton upButton__js">Do góry</button>
+        <button class="navBar__button navBar__button--up upButton__js">Do góry</button>
     </header>
 
     <main>
@@ -95,7 +107,7 @@
             Strona domowa Kamila Wróblewskiego. Wszystkie treśći są efektem szkolenia WTF: Co ten frontend?
         </p>
     </footer>
-    <script src="navigationbar.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
