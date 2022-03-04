@@ -14,6 +14,7 @@
     right: 10%;
     left: 0px;
     top: 0px;
+    z-index: 3;
     @media (max-width: 1023px) {
         min-width: 146px;
         border-bottom-left-radius: 0px;
@@ -120,24 +121,64 @@ html {
     text-align: center;
     @include headingFont;
 }
+
+.indexGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 32px;
+}
 .about {
+    position:relative;
+    
+    // background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(189, 177, 255) 100%);
+    &:before{
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: rgba(255, 255, 255, 0);
+        z-index: -1;
+        background: linear-gradient(240deg,#89ff00,transparent ,#00bcd4);
+        border-radius: 30px 5px 30px 5px;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: rgb(0, 0, 0);
+        z-index: -2;
+        filter: blur(20px);
+        background: linear-gradient(240deg,#89ff00,transparent,#00bcd4);
+        
+    }
     &__header {
+        padding: 0 12px;
         &--main {
             color: $headingColor;
+            text-align: center;
         }
-        &--secondar {
+        &--secondary {
         }
     }
     &__paragraph {
+        padding: 0 5px;
     }
 }
 
 .diary {
+    grid-column: 2 / 5;
     &__header {
+        text-align: center;
         color: $headingColor;
     }
     &__section {
-        max-height: 500px;
+        max-height: 400px;
         overflow-y: scroll;
         &--header {
         }
@@ -271,7 +312,7 @@ html {
 
 body {
     margin: 0mm;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(108, 133, 243) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgb(189, 177, 255) 100%);
     background-attachment: fixed;
     background-size: 100vh;
 }
