@@ -316,6 +316,7 @@ body {
     background-attachment: fixed;
     background-size: 100vh;
     // background: #d7d8ff;
+    scrollbar-color: #19647e ;
 }
 
 main {
@@ -326,8 +327,12 @@ main {
 
 html {
     overflow-y: scroll;
+    
 }
 
 * {
     box-sizing: border-box;
+    
 }
+
+
