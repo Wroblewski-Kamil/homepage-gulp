@@ -40,3 +40,5 @@ menuButton.addEventListener('click', expandMenu);
 
 const dupa = document.getElementsByClassName('navBar__button--menu')
 console.log(dupa)
+
+const emojis = ['😎', '😁', '😥', '😍']
