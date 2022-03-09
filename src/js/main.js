@@ -99,3 +99,22 @@ for (let property in person) {
 
 document.cookie = "testoweCiastko = wartość";
 console.log(document.cookie)
+
+console.log(JSON.stringify(person))
+
+localStorage.setItem('person', JSON.stringify(person));
+
+const person2 = {
+  name: 'konrad',
+  age:28
+}
+
+const jsonPerson = JSON.stringify(person2)
+
+localStorage.setItem('person2', jsonPerson)
+
+console.log(localStorage.getItem('person'))
+
+const personStringify = localStorage.getItem('person2');
+const newPerson = JSON.parse(personStringify);
+console.log(newPerson)
