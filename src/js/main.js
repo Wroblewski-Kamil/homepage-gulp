@@ -41,4 +41,61 @@ menuButton.addEventListener('click', expandMenu);
 const dupa = document.getElementsByClassName('navBar__button--menu')
 console.log(dupa)
 
-const emojis = ['😎', '😁', '😥', '😍']
+// nauka
+
+const emojis = ['😎', '😁', '😥', '😍','🤗','🤐','🤐','🤐'];
+console.log(emojis);
+emojis.push('🤐');
+console.log(emojis);
+
+for(let emoji of emojis){
+  console.log(`element: ${emoji}`)
+}
+
+
+
+for(let i = 0; i < emojis.length; i++){
+  console.log(`i: ${i}`);
+  console.log(`element ${i+1}: ${emojis[i]}`);
+}
+console.log('done');
+
+
+let a = 8;
+console.log(--a);
+console.log(a);
+
+console.log(a++);
+console.log(a);
+
+
+while (a > 0) {
+  a--;
+  console.log(a);
+};
+
+console.log(a);
+
+
+
+do{
+  a = a + 3;
+  console.log(a);
+} while (a < 9);
+
+
+
+const person = {
+  name: 'kamil',
+  age:22
+}
+
+for (let property in person) {
+  console.log(`${property}: ${person[property]}`);
+}
+
+
+
+
+document.cookie = "testoweCiastko = wartość";
+console.log(document.cookie)
